@@ -3,3 +3,16 @@
 @import "avatar";
 @import "navbar";
 @import "card";
+@import "banner";
+@import "button";
+@import "footer";
+
+.container {
+  width: 900px;
+  margin: auto;
+}
+
+.main-display {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}

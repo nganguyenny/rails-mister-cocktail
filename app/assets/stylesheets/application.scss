@@ -13,3 +13,20 @@
 @import "pages/index";
 
 @import "pages"; /* Will import `_pages.scss` */
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  a:hover {
+    color: black;
+  }
+}
+
+/* Custom design below! */
+.text-center {
+  text-align: center;
+}

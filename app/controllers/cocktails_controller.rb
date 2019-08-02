@@ -26,18 +26,18 @@ class CocktailsController < ApplicationController
     end
   end
 
-  # def update
-  #   if @cocktail.update(cocktail_params)
-  #     redirect_to cocktails_path
-  #   else
-  #     render :edit
-  #   end
-  # end
+  def update
+    if @cocktail.update(cocktail_params)
+      redirect_to cocktails_path
+    else
+      render :edit
+    end
+  end
 
-  # def destroy
-  #   @cocktail.destroy
-  #   redirect_to cocktails_path
-  # end
+  def destroy
+    @cocktail.destroy
+    redirect_to cocktails_path
+  end
 
   private
     def set_cocktail
@@ -45,6 +45,6 @@ class CocktailsController < ApplicationController
     end
 
     def cocktail_params
-      params.require(:cocktail).permit(:name, doses_attributes: [:description, :ingredient_id])
+      params.require(:cocktail).permit(:name, :photo, doses_attributes: [:description, :ingredient_id])
     end
 end

@@ -1,13 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Cocktails</h1>
+<div class="container main-display">
 
-<div class="cards">
-  <% @cocktails.each do |cocktail| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1546553295-2cb31e5db3b8)">
-      <a><%= link_to cocktail.name, cocktail %></a>
-    </div>
-  <% end %>
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+        url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+        <div class="card-category">
+          <%= link_to cocktail.name, cocktail %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
 </div>
-
-<%= link_to 'New Cocktail', new_cocktail_path %>

@@ -11,11 +11,26 @@
   </head>
 
   <body>
-    <div class="container">
+
+    <div class="banner">
+      <div class="container">
+        <h1>Misty taste of moonshine</h1>
+        <p>Change your life and learn to code at one of our campuses around the world.</p>
+        <a href="/cocktails/new" class="btn-primary">Mix your own here!</a>
+      </div>
+    </div>
+
     <%= yield %>
 
-
+    <div class="footer">
+    <div class="links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
+    <p>Come make sexy misty fluffy drinks with us  <i class="fas fa-heart"></i></p>
+  </div>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   
