@@ -65,3 +65,5 @@ gem 'simple_form'
 gem 'rest-client'
 
 gem 'faker'
+
+gem 'dotenv-rails', groups: [:development, :test]
